@@ -13,6 +13,7 @@ class Evented {
         this._emiter = new EventEmitter()
     }
 
+    //glue code for Eventable trait
     getEmitter() {
         return this._emiter
     }
