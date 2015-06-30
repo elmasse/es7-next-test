@@ -2,7 +2,7 @@
 
 import { traits, requires } from 'cocktail.next'
 
-import create, { wanted } from './create'
+import create from './lib/create'
 
 const MixFoo = {
     foo() {

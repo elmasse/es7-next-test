@@ -9,6 +9,7 @@
   "author": "Maximiliano Fierro",
   "license": "ISC",
   "dependencies": {
+    "cocktail-trait-eventable": "0.0.6",
     "cocktail.next": "git://github.com/cocktailjs/cocktail.next.git"
   }
 }
