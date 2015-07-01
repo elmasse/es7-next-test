@@ -10,12 +10,12 @@ import EventEmitter from 'events'
 class Evented {
 
     constructor() {
-        this._emiter = new EventEmitter()
+        this._emitter = new EventEmitter()
     }
 
     //glue code for Eventable trait
     getEmitter() {
-        return this._emiter
+        return this._emitter
     }
 
     emitFoo() {
