@@ -1,6 +1,6 @@
 'use strict';
 
-import { traits } from 'cocktail.next'
+import { traits } from 'traits-decorator'
 
 import Eventable from 'cocktail-trait-eventable'
 import EventEmitter from 'events'
