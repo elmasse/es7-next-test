@@ -18,15 +18,15 @@ const MixFoo = {
 @traits(MixFoo)
 class MyClass {
 
-    constructor(collection: []) {
+    constructor(collection = []) {
         this.collection = collection
     }
 }
 
 let obj = MyClass::create([1,3,5])
 
-obj.foo()
-obj.printCollection()
+obj.foo() // woohoo
+obj.printCollection() // collection: 1,3,5
 
 
 //reusing traits decorator
@@ -38,9 +38,14 @@ function myTraits(...list){
 
 @myTraits(MixFoo)
 class Another {
-
+    // factory method
+    static create() {
+        console.log('static create called!')
+        return new Another()
+    }
 }
 
-let a = new Another();
+// ::create calls a static create or constructor
+let a = Another::create()  //static create called!
 
-a.foo();
+a.foo() // woohoo
