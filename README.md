@@ -6,7 +6,7 @@
 
 -  traits-decorator
 -  spread/rest params (ES7 for merging objects)
--  backticks
+-  template string
 -  bind-operator
 -  destructuring
 -  class
