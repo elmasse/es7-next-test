@@ -1,8 +1,11 @@
 'use strict'
 
-import create from './create'
- 
+import create, {createWithFactoryNamed} from '../lib/create'
+import withFactory from '../lib/decorator/factory' 
 
+
+
+//factory for Button
 export function button(...options) {
     return Button::create(...options)
 }
@@ -34,3 +37,17 @@ export class Button {
         }
     }
 }
+
+
+
+
+export function buttonWithFactory(...options) {
+    let create = createWithFactoryNamed('factory')
+    return ButtonWithFactory::create(...options)
+}
+
+@withFactory('factory')
+export class ButtonWithFactory extends Button {
+
+}
+
