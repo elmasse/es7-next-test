@@ -26,3 +26,5 @@ let buttonWithFactoryThree = ButtonWithFactory.factory(options) // static factor
     let create = createWithFactoryNamed('factory') // configure a bindable with a given factory name
     let buttonWithFactoryFour = ButtonWithFactory::create(options) // bindable
 }
+
+let buttonWithFactoryFive = ButtonWithFactory::create(options) // bindable will call ButtonWithFactory.create factory method 

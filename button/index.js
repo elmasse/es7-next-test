@@ -1,7 +1,7 @@
 'use strict'
 
 import create, {createWithFactoryNamed} from '../lib/create'
-import withFactory from '../lib/decorator/factory' 
+import factory from '../lib/decorator/factory' 
 
 
 
@@ -40,14 +40,15 @@ export class Button {
 
 
 
-
+//factory for ButtonWithFactory
 export function buttonWithFactory(...options) {
     let create = createWithFactoryNamed('factory')
     return ButtonWithFactory::create(...options)
 }
 
-@withFactory('factory')
+@factory('factory')
 export class ButtonWithFactory extends Button {
 
 }
 
+// ButtonWithFactory has actually 2 factory methods: `create` inherited from Button and `factory`
