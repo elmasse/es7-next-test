@@ -13,6 +13,12 @@ class Second {
     }
 }
 
+class Third {
+    constructor (options = [] /* options: [] // << flow */) {
+        console.log(options)
+    }
+}
+
 let first  = new First(), // {conf: '1'}
     first1 = new First({}), // {}
     first2 = new First([1,3,5]) // [1,3,5]
